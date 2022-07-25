@@ -1,0 +1,149 @@
+.product {
+	display: grid;
+	grid-template-columns:
+		[start] 70px [logoend] 30px [titlestart] calc(50% - 100px) [middle]
+		1fr [pricestart] auto [priceend] 40px [creditstart] auto [creditend] 40px [ratingstart] auto [end];
+
+	margin-bottom: 30px;
+	padding: 30px;
+}
+
+.logo {
+	grid-column: start / logoend;
+	grid-row: 1 / span 2;
+}
+
+.title,
+.tags {
+	grid-column: titlestart / middle;
+}
+
+.price,
+.priceTitle {
+	grid-column: pricestart / priceend;
+}
+
+.credit,
+.creditTitle {
+	grid-column: creditstart / creditend;
+}
+
+.rating,
+.ratingTitle {
+	grid-column: ratingstart / end;
+}
+
+.hr,
+.description,
+.actions {
+	grid-column: start / end;
+}
+
+.features {
+	grid-column: start / middle;
+}
+
+.advDisadv {
+	grid-column: middle / end;
+}
+
+.logo img {
+	border-radius: 5px;
+}
+
+.title {
+	align-self: flex-end;
+
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 27px;
+}
+
+.category {
+	margin-top: 7px;
+}
+
+.price,
+.credit {
+	align-self: flex-end;
+
+	font-size: 20px;
+	line-height: 27px;
+}
+
+.month {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.discount {
+	margin-left: 5px;
+}
+
+.rating {
+	align-self: flex-end;
+}
+
+.description {
+	margin-bottom: 15px;
+
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.advDisadv {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.advTitle {
+	margin-bottom: 5px;
+
+	font-weight: 700;
+}
+
+.advantages {
+	margin-bottom: 20px;
+	padding-left: 15px;
+
+	border-left: 2px solid var(--green);
+}
+
+.disadvantages {
+	padding-left: 15px;
+
+	border-left: 2px solid var(--red);
+}
+
+.priceTitle,
+.creditTitle,
+.ratingTitle {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 19px;
+}
+
+.reviewButton {
+	margin-left: 20px;
+}
+
+.characteristics {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+
+	padding-right: 60px;
+	gap: 10px;
+
+	font-size: 16px;
+	line-height: 32px;
+}
+
+.charName {
+	font-weight: bold;
+}
+
+.charDots {
+	margin-bottom: 10px;
+
+	border-bottom: 1px dashed var(--gray-light);
+}
