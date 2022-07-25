@@ -1,12 +1,14 @@
 .firstLevel {
 	display: grid;
+	align-items: center;
+
+	margin-top: 20px;
+
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 25px;
 	grid-template-columns: 24px 1fr;
 	gap: 20px;
-	align-items: center;
-	font-weight: 500;
-	font-size: 18px;
-	line-height: 25px;
-	margin-top: 20px;
 }
 
 .firstLevelActive,
@@ -27,8 +29,9 @@
 
 	color: var(--gray-dark);
 
-	font-weight: 300;
 	font-size: 12px;
+
+	font-weight: 300;
 	line-height: 16px;
 }
 
@@ -53,17 +56,18 @@
 }
 
 .thirdLevel {
-	margin-bottom: 10px;
 	display: block;
+
+	margin-bottom: 10px;
 
 	cursor: pointer;
 
 	color: var(--gray-dark);
-	font-weight: 500;
+
 	font-size: 14px;
+	font-weight: 500;
 	line-height: 19px;
 }
-
 
 .thirdLevelActive,
 .thirdLevel:hover {
