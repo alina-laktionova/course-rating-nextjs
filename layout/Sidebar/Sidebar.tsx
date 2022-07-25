@@ -8,7 +8,7 @@ export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
 	return (
 		<div className={cn(className, styles.sidebar)} {...props}>
 			<Logo />
-			<div>поиск</div>
+			<div>Search</div>
 			<Menu />
 		</div>
 	);
