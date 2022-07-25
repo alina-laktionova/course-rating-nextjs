@@ -25,7 +25,6 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
             </div>
             <div className={styles.hhTitle}>
                 <Htag tag='h2'>Vacancies - {page.category}</Htag>
-                <Tag color='red' size='m'>hh.ru</Tag>
             </div>
             {firstCategory == TopLevelCategory.Courses && page.hh && <HhData {...page.hh}/>}
             {page.advantages && page.advantages.length > 0 && <>
