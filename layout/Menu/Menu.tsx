@@ -14,7 +14,7 @@ export const Menu = (): JSX.Element => {
 
 	const variants = {
 		visible: {
-			marginBottom: 20,
+			marginBottom: 10,
 			transition: {
 				when: 'beforeChildren',
 				staggerChildren: 0.1
@@ -28,7 +28,7 @@ export const Menu = (): JSX.Element => {
 	const variantsChildren = {
 		visible: {
 			opacity: 1,
-			height: 29,
+			height: 'auto',
 		},
 		hidden: {
 			opacity: 0,
@@ -94,17 +94,20 @@ export const Menu = (): JSX.Element => {
 
 	const buildThirdLevel = (pages: PageItem[], route: string) => {
 		return (
-			pages.map(p => (
-				<motion.div key={p._id} variants={variantsChildren}>
-					<Link href={`/${route}/${p.alias}`}>
-						<a className={cn(styles.thirdLevel, {
-							[styles.thirdLevelActive]: `/${route}/${p.alias}` == router.asPath
-						})}>
-							{p.category}
-						</a>
-					</Link>
-				</motion.div>
-			))
+			<motion.div variants={variantsChildren}>
+				{pages.map(p => (
+						<div key={p._id} >
+							<Link href={`/${route}/${p.alias}`}>
+								<a className={cn(styles.thirdLevel, {
+									[styles.thirdLevelActive]: `/${route}/${p.alias}` == router.asPath
+								})}>
+									{p.category}
+								</a>
+							</Link>
+				</div>
+				))}
+			</motion.div>
+
 		);
 	};
 

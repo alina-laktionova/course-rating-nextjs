@@ -11,6 +11,7 @@ import {ReviewFormInterface, ReviewSentResponseInterface} from "./ReviewForm.int
 import axios from "axios";
 import {API} from "../../helpers/api";
 import {useState} from "react";
+import { motion } from 'framer-motion';
 
 export const ReviewForm = ({productId, className, ...props}: ReviewFormProps): JSX.Element => {
     const {register, control, handleSubmit, formState: {errors}, reset} = useForm<ReviewFormInterface>();
@@ -34,7 +35,8 @@ export const ReviewForm = ({productId, className, ...props}: ReviewFormProps): J
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form
+            onSubmit={handleSubmit(onSubmit)}>
             <div className={cn(styles.reviewForm, className)} {...props}>
                 <Input
                     {...register(
