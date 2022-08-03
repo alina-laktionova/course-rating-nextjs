@@ -5,6 +5,7 @@ import React, { FunctionComponent } from 'react';
 import { Sidebar } from './Sidebar/Sidebar';
 import { Footer } from './Footer/Footer';
 import { AppContextProvider, IAppContext } from '../context/app.context';
+import {UpButton} from "../components";
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
 	return (
@@ -15,6 +16,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
 				{children}
 			</div>
 			<Footer className={styles.footer} />
+			<UpButton/>
 		</div>
 	);
 };
