@@ -4,7 +4,7 @@
 		[start] 70px [logoend] 30px [titlestart] calc(50% - 100px) [middle]
 		1fr [pricestart] auto [priceend] 40px [creditstart] auto [creditend] 40px [ratingstart] auto [end];
 
-	margin-bottom: 30px;
+	margin-top: 30px;
 	padding: 30px;
 }
 
@@ -127,6 +127,10 @@
 	margin-top: 5px;
 }
 
+.ratingTitle a{
+	color: var(--primary);
+}
+
 .reviewButton {
 	margin-left: 20px;
 }
@@ -150,6 +154,17 @@
 	margin-bottom: 10px;
 
 	border-bottom: 1px dashed var(--gray-light);
+}
+
+.closed {
+	overflow: hidden;
+	max-height: 0;
+	padding: 0;
+}
+
+.opened {
+	max-height: unset;
+	padding: 30px;
 }
 
 @media screen and (max-width: 1320px) {
