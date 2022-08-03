@@ -18,7 +18,6 @@ export const Product = ({product, className, ...props}: ProductProps): JSX.Eleme
 
     const scrollToReviews = () => {
         setIsReviewOpened(true);
-        console.log(reviewRef);
         reviewRef.current?.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
