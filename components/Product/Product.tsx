@@ -115,6 +115,7 @@ export const Product = motion(forwardRef(({product, className, ...props}: Produc
             <motion.div variants={variants} initial='hidden' animate={isReviewOpened ? 'visible' : 'hidden'}>
                 <Card ref={reviewRef}
                       color='blue'
+                      tabIndex={isReviewOpened ? 0 : -1}
                       className={cn(styles.reviews, {
                           [styles.opened]: isReviewOpened,
                           [styles.closed]: !isReviewOpened,
