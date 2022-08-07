@@ -24,7 +24,6 @@
 .secondLevel {
 	margin-bottom: 10px;
 
-	cursor: pointer;
 	text-transform: uppercase;
 
 	color: var(--gray-dark);
@@ -32,7 +31,12 @@
 	font-size: 12px;
 
 	font-weight: 300;
-	line-height: 16px;
+	padding: 0;
+
+	cursor: pointer;
+	border: none;
+
+	background: none;
 }
 
 .secondBlock {
@@ -58,7 +62,7 @@
 
 	font-size: 14px;
 	font-weight: 500;
-	line-height: 19px;
+	outline-offset: -1px;
 }
 
 .thirdLevelActive,
