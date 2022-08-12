@@ -31,13 +31,11 @@
 .skipLink {
 	display: block;
 	position: fixed;
-	border-radius: 5px;
 	left: 100px;
 	top: 2px;
 	overflow: hidden;
 	height: 0;
-	background: var(--primary);
-	color: var(--white);
+	color: var(--primary);
 }
 
 .displayed {

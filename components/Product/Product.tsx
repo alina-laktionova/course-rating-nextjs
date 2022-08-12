@@ -50,22 +50,32 @@ export const Product = motion(forwardRef(({product, className, ...props}: Produc
                 </div>
                 <div className={styles.title}>{product.title}</div>
                 <div className={styles.price}>
-                    {priceUSD(product.price)}
+                    <span>
+                        <span className='visuallyHidden'>price</span>
+                        {priceUSD(product.price)}
+                    </span>
                     {product.oldPrice && <Tag className={styles.discount} color='green'>
+                        <span className='visuallyHidden'>discount</span>
                         {priceUSD(product.price - product.oldPrice)}
                     </Tag>}
                 </div>
                 <div className={styles.credit}>
-                    {priceUSD(product.credit)}/
-                    <span className={styles.month}>month</span>
+                    <span>
+                        <span className='visuallyHidden'>credit</span>
+                        {priceUSD(product.credit)}/
+                        <span className={styles.month}>month</span>
+                    </span>
                 </div>
-                <div className={styles.rating}><Rating rating={product.reviewAvg ?? product.initialRating}/></div>
+                <div className={styles.rating}>
+                    <span className='visuallyHidden'>{'rating' + (product.reviewAvg ?? product.initialRating)}</span>
+                    <Rating rating={product.reviewAvg ?? product.initialRating}/>
+                </div>
                 <div className={styles.tags}>
                     {product.categories.map((c) =>
                         <Tag className={styles.category} key={c} color='ghost'>{c}</Tag>)}
                 </div>
-                <div className={styles.priceTitle}>price</div>
-                <div className={styles.creditTitle}>credit</div>
+                <div className={styles.priceTitle} aria-hidden>price</div>
+                <div className={styles.creditTitle} aria-hidden>credit</div>
                 <div className={styles.ratingTitle}>
                     <a href='#ref' onClick={scrollToReviews}>
                         {product.reviewCount} {product.reviewCount === 1 ? 'review' : 'reviews'}
@@ -102,6 +112,7 @@ export const Product = motion(forwardRef(({product, className, ...props}: Produc
                         More details
                     </Button>
                     <Button
+                        aria-expanded={isReviewOpened}
                         appearance='ghost'
                         arrow={isReviewOpened ? 'down' : 'right'}
                         className={styles.reviewButton}
