@@ -1,6 +1,6 @@
 .textarea {
-	padding: 7px 15px;
 	width: 100%;
+	padding: 7px 15px;
 
 	color: var(--black);
 	border: none;
@@ -31,5 +31,6 @@
 	position: absolute;
 	bottom: -14px;
 	left: 2px;
+
 	color: var(--red);
 }

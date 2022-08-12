@@ -20,23 +20,25 @@ a {
 }
 
 .visuallyHidden {
+	position: absolute;
+
+	overflow: hidden;
+
 	width: 0;
 	height: 0;
-	overflow: hidden;
-	position: absolute;
 }
 
 :root {
 	--black: #3B434E;
 	--gray-light: #EBEBEB;
 	--gray: #A4A4A4;
-	--gray-dark: #6c7077;
+	--gray-dark: #6C7077;
 	--white: white;
 	--primary: #7351F5;
 	--primary-hover: #6344DF;
 	--red: #FC836D;
-	--red-light: #ffc5bb;
-	--green: #007b48;
+	--red-light: #FFC5BB;
+	--green: #007B48;
 	--green-light: #C8F8E4;
 	--font-family: "Noto Sans KR", sans-serif;
 }

@@ -1,5 +1,4 @@
 import styles from './UpButton.module.css';
-import UpIcon from '../ButtonIcon/arrowUp.svg';
 import {useScrollY} from "../../hooks/useScrollY";
 import {motion, useAnimation} from "framer-motion";
 import {useEffect} from "react";
