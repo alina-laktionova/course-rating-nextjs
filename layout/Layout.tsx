@@ -1,7 +1,7 @@
 import {LayoutProps} from './Layout.props';
 import styles from './Layout.module.css';
 import {Header} from './Header/Header';
-import React, {FunctionComponent, useRef, useState} from 'react';
+import React, {FunctionComponent, KeyboardEvent, useRef, useState} from 'react';
 import {Sidebar} from './Sidebar/Sidebar';
 import {Footer} from './Footer/Footer';
 import {AppContextProvider, IAppContext} from '../context/app.context';
@@ -12,7 +12,7 @@ const Layout = ({children}: LayoutProps): JSX.Element => {
     const [isSkipLinkDisplayed, setIsSkipLinkDisplayed] = useState<boolean>(false);
     const bodyRef = useRef<HTMLDivElement>(null);
 
-    const skipContentAction = (event: KeyboardEvent) => {
+    const skipContentAction = (event: KeyboardEvent<HTMLAnchorElement>) => {
         if (event.code == 'Space' || event.code == 'Enter') {
             event.preventDefault();
             bodyRef.current?.focus();

@@ -2,8 +2,12 @@
 	fill: var(--primary);
 }
 
+.star {
+	display: inline-block;
+}
+
 .star svg {
-	margin-right: 5px;
+	margin: 0 2px;
 }
 
 .editable {

@@ -30,6 +30,6 @@
 .errorMessage {
 	position: absolute;
 	bottom: -14px;
-	left: 0;
+	left: 2px;
 	color: var(--red);
 }

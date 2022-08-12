@@ -34,6 +34,7 @@ export const Product = motion(forwardRef(({product, className, ...props}: Produc
             behavior: 'smooth',
             block: 'start'
         });
+        reviewRef.current?.focus({ preventScroll: true });
     };
 
     return (
@@ -126,7 +127,7 @@ export const Product = motion(forwardRef(({product, className, ...props}: Produc
                             <Divider/>
                         </div>
                     ))}
-                    <ReviewForm productId={product._id}/>
+                    <ReviewForm productId={product._id} isOpened={isReviewOpened}/>
                 </Card>
             </motion.div>
 
