@@ -22,7 +22,7 @@ const Layout = ({children}: LayoutProps): JSX.Element => {
 
     return (
         <div className={styles.wrapper}>
-            <a tabIndex={1}
+            <a tabIndex={0}
                onFocus={() => setIsSkipLinkDisplayed(true)}
                onKeyDown={skipContentAction}
                className={cn(styles.skipLink, {
